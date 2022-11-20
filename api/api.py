@@ -8,7 +8,7 @@ from helper import get_data,get_schd_time
 
 app = Flask(__name__)
 CORS(app)
-app.config["REDIS_URL"] = "redis://redis"
+app.config["REDIS_URL"] = "redis://127.0.0.1"
 app.register_blueprint(sse, url_prefix='/events')
 log = logging.getLogger('apscheduler.executors.default')
 log.setLevel(logging.INFO)
